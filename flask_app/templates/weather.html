@@ -13,16 +13,24 @@
     <body>
         <form action="/search" method="post">
             <div class="form-floating mb-3">              
-                <label for="floatingTextarea2" name="zip">Zip Code:</form:label>
-                <input name="zip" class="form-control" required></input>
+                <label for="floatingTextarea2" name="city">City Name:</form:label>
+                <input name="city" class="form-control" required></input>
+            </div>
+            <div class="form-floating mb-3">              
+                <label for="floatingTextarea2" name="state">State:</form:label>
+                <input name="state" class="form-control" required></input>
             </div>
             <button class="w-100 btn btn-lg btn-primary">Search</button>
         </form>
 
-        <div>
-            CITY: {{session.city}} 
-            {{session.temp}}º
-            {{session.weather}}
+        <div> 
+            <div>
+                <img src="http://openweathermap.org/img/w/{{session.icon}}.png" alt="weatherIcon"/>
+            </div> 
+            {{session.dateTime}} <br>
+            CITY: {{session.city}} <br>
+            TEMP: {{session.temp}}º <br>
+            DESC: {{session.weather}} 
         </div>
     </body>
 </body>
